@@ -1,0 +1,308 @@
+<skin>
+	<!-- ####### MENU SCREENS TEMPLATE ####### -->
+	<screen name="ScreenMenuTemplate">
+		<panel name="GenericLayoutFullTemplate" />
+		<panel name="ScrollBarTemplate480" />
+		<!-- menu list -->
+		<widget source="menu" render="Listbox" position="145,100" zPosition="2" size="680,480" backgroundPixmap="horizon/bars/selectionbw.png" selectionPixmap="horizon/bars/selection.png" transparent="1" scrollbarMode="showAlways">
+			<convert type="TemplatedMultiContent">
+			{
+				"template": [
+					MultiContentEntryText(pos = (51, 7), size = (680, 38), flags = RT_HALIGN_LEFT, text = 0)
+				],
+				"fonts": [gFont("Regular", 28)],
+				"itemHeight": 40
+			}
+			</convert>
+		</widget>
+	</screen>
+
+        <!-- ####### TEMPLATE FOR ICONS OF "MENU SELECTED ITEM" (16-03) ####### -->
+	<screen name="MenuIconsTemplate">
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/media_player.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">media_player</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/timer_edit.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">timer_edit</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/ico_caminfo.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">emu</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/ico_caminfo.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">cs</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/ico_noico.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">cloud</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/info_screen.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">info_screen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/plugin_selection.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">plugin_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/ico_code.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">scripts</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/setup_selection.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">setup_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/standby_restart_list.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">standby_restart_list</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/ico_noico.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">scart_switch</convert>
+			<convert type="ConditionalShowHide" /> 
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/ico_noico.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">dmc_mainmenu</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/setup_noico.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">dvd_player</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+
+	<!-- (086) ####### MENU ####### -->
+	<screen name="Menu" position="0,0" size="1280,720"  title="Menu" flags="wfNoBorder" >
+		<panel name="ScreenMenuTemplate" />
+		<widget source="menu" render="Listbox" position="145,110" size="650,450" scrollbarMode="showOnDemand" backgroundPixmap="horizon/bars/selectionbw.png" selectionPixmap="horizon/bars/selection.png" transparent="1" >
+			<convert type="StringList" />
+		</widget>
+	</screen> 
+
+	<!-- (005) ####### MAIN MENU ####### -->
+	<screen name="menu_mainmenu" position="0,0" size="1280,720" title="Main Menu"  flags="wfNoBorder" >
+		<panel name="ScreenMenuTemplate" />
+		<panel name="MenuIconsTemplate" />
+	</screen>
+	
+	<!-- (006) ####### MENU SETUP - CONFIGURATION ####### (12-02) -->
+	<screen name="menu_setup" position="0,0" size="1280,720" title="Main Menu Setup"  flags="wfNoBorder" >
+		<panel name="ScreenMenuTemplate" />
+	</screen>
+	
+	<!-- (007) ####### MENU SCAN - RICERCA CANALI ####### (12-02) -->
+	<screen name="menu_scan" position="0,0" size="1280,720" title="Main Menu Channel Scan" flags="wfNoBorder">
+		<panel name="ScreenMenuTemplate" />
+	</screen>
+	
+	<!-- (008) ####### MENU SYSTEM - SISTEMA ####### (12-02) -->
+	<screen name="menu_system" position="0,0" size="1280,720" title="Main Menu System"  flags="wfNoBorder">
+		<panel name="ScreenMenuTemplate" />
+	</screen>
+	
+	<!-- (011) ####### MENU HDD ####### (15-02) -->
+	<screen name="menu_harddisk" position="0,0" size="1280,720" title="Main Menu HDD"  flags="wfNoBorder">
+		<panel name="ScreenMenuTemplate" />
+	</screen>
+	
+	<!-- (012) ####### MENU INFORMATION - INFORMAZIONI ####### (13-02) -->
+	<screen name="menu_information" position="0,0" size="1280,720" title="Menu Information" flags="wfNoBorder" >
+		<panel name="ScreenMenuTemplate" />
+	</screen>
+	
+	<!-- (013) ####### MENU SHUTDOWN ####### (12-02) -->
+	<screen name="menu_shutdown" position="0,0" size="1280,720" title="Menu ShutDown"  flags="wfNoBorder">
+		<panel name="ScreenMenuTemplate" />
+	</screen>
+
+	<!-- (013) ####### MENU CLOUD ####### (12-02) -->
+	<screen name="menu_cloud" position="0,0" size="1280,720" title="Menu Cloud"  flags="wfNoBorder" >
+		<panel name="ScreenMenuTemplate" />
+		<panel name="MenuIconsTemplate" />
+	</screen>
+
+	<!-- ####### SCROLLBAR MENU TEMPLATE ####### -->
+	<screen name="ScrollBarTemplate440">
+		<ePixmap position="800,100" zPosition="4" size="31,440" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="800,540" zPosition="4" size="31,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+	</screen>
+	<screen name="ScrollBarTemplate450">
+		<ePixmap position="800,100" zPosition="4" size="31,450" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="800,550" zPosition="4" size="31,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+	</screen>
+	<screen name="ScrollBarTemplate480">
+		<ePixmap position="800,100" zPosition="4" size="31,480" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="800,580" zPosition="4" size="31,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+	</screen>
+	<screen name="ScrollBarTemplate500">
+		<ePixmap position="800,100" zPosition="4" size="31,500" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="800,600" zPosition="4" size="31,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+	</screen>
+	<screen name="ScrollBarTemplate520">
+		<ePixmap position="800,100" zPosition="4" size="31,520" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="800,620" zPosition="4" size="31,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+	</screen>
+
+	<!-- ####### GENERIC FULL FRAME TEMPLATES ####### -->
+	<screen name="GenericLayoutFullTemplate">
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+	</screen>
+		
+	<!-- ####### GENERIC FULL FRAME TEMPLATES ####### -->
+	<screen name="GenericLayoutMidTemplate">
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+	</screen>
+
+	<!-- ####### GENERIC FULL FRAME TEMPLATES ####### -->
+	<screen name="GenericLayoutLiteTemplate">
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
+	</screen>
+
+	<!-- ####### GENERIC SCREEN NAME WITH 4 BUTTONS TEMPLATE ####### -->
+	<screen name="4Buttons">
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="800,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget name="key_red"    position="80,663"  zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green"  position="325,663" zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" position="588,663" zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue"   position="845,663" zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+
+	<!-- ####### GENERIC SCREEN NAME WITH 3 BUTTONS TEMPLATE ####### -->
+	<screen name="3Buttons">
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="600,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget name="key_red"    position="80,663"  zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green"  position="325,663" zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" position="588,663" zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+
+	<!-- ####### GENERIC SCREEN NAME WITH 2 BUTTONS TEMPLATE ####### -->
+	<screen name="2Buttons">
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="400,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget name="key_red"    position="80,663"  zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green"  position="325,663" zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+  
+	<!-- ####### GENERIC SCREEN NAME WITH 1 BUTTONS TEMPLATE ####### -->
+	<screen name="1Buttons">
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="100,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget name="key_red"    position="80,663"  zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+
+
+
+	<!-- ####### GENERIC SCREEN WITH 4 BUTTONS SOURCE TEMPLATE ####### -->
+	<screen name="4ButtonsW">
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="800,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget source="key_red"    render="Label"  position="80,663"  zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green"  render="Label"  position="325,663" zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label"  position="588,663" zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue"   render="Label"  position="845,663" zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1"/>
+	</screen>
+
+	<!-- ####### GENERIC SCREEN WITH 3 BUTTONS SOURCE TEMPLATE ####### -->
+	<screen name="3ButtonsW">
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="600,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget source="key_red"    render="Label"  position="80,663"  zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green"  render="Label"  position="325,663" zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label"  position="588,663" zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+
+	<!-- ####### GENERIC SCREEN WITH 2 BUTTONS SOURCE TEMPLATE ####### -->
+	<screen name="2ButtonsW">
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="400,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget source="key_red"    render="Label"  position="80,663"  zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green"  render="Label"  position="325,663" zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+
+	<!-- ####### GENERIC SCREEN WITH 1 BUTTONS SOURCE TEMPLATE ####### -->
+	<screen name="1ButtonsW">
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="100,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget source="key_red"    render="Label"  position="80,663"  zPosition="4" size="200,40" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+
+	<!-- Input Box -->
+	<screen name="ChoiceBox" position="0,0" size="740,650" title="Input Box" >
+		<widget name="text" position="20,20" size="810,25" font="Regular;24" foregroundColor="#538eff" transparent="1" />
+		<widget name="list" position="20,40" size="810,335" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
+		<applet type="onLayoutFinish">
+# this should be factored out into some helper code, but currently demonstrates applets.
+from enigma import eSize, ePoint
+orgwidth = self.instance.size().width()
+orgpos = self.instance.position()
+textsize = self[&quot;text&quot;].getSize()
+# y size still must be fixed in font stuff...
+textsize = (textsize[0] + 80, textsize[1] + 80)
+count = len(self.list)
+if count &gt; 10:
+	count = 10
+offset = 25 * count
+wsizex = textsize[0] + 80
+wsizey = textsize[1] + offset + 10
+if (640 &gt; wsizex):
+	wsizex = 640
+wsize = (wsizex, wsizey)
+# resize
+self.instance.resize(eSize(*wsize))
+# resize label
+self[&quot;text&quot;].instance.resize(eSize(*textsize))
+# move list
+listsize = (wsizex - 20, 25 * count)
+self[&quot;list&quot;].instance.move(ePoint(10, textsize[1]))
+self[&quot;list&quot;].instance.resize(eSize(*listsize))
+# center window
+newwidth = wsize[0]
+self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3)))
+		</applet>
+	</screen>
+
+	<!-- Message Box -->
+	<screen name="MessageBox" position="340,250" size="600,10" title="Message">
+		<widget name="text" position="65,8" size="520,0" font="Regular;22" transparent="1"/>
+		<widget name="ErrorPixmap" pixmap="vanity/icons/input_error.png" position="5,15" size="53,53" alphatest="on" />
+		<widget name="QuestionPixmap" pixmap="vanity/icons/input_question.png" position="5,15" size="53,53" alphatest="on" />
+		<widget name="InfoPixmap" pixmap="vanity/icons/input_info.png" position="5,15" size="53,53" alphatest="on" />
+		<widget name="list" position="100,100" size="480,375" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
+		<applet type="onLayoutFinish">
+# this should be factored out into some helper code, but currently demonstrates applets.
+from enigma import eSize, ePoint
+orgwidth = self.instance.size().width()
+orgpos = self.instance.position()
+textsize = self[&quot;text&quot;].getSize()
+# y size still must be fixed in font stuff...
+textsize = (textsize[0] + 80, textsize[1] + 80)
+offset = 20
+if self.type == self.TYPE_YESNO:
+	offset = 80
+wsizex = textsize[0] + 80
+wsizey = textsize[1] + offset
+if (600 &gt; wsizex):
+	wsizex = 600
+wsize = (wsizex, wsizey)
+# resize
+self.instance.resize(eSize(*wsize))
+# resize label
+self[&quot;text&quot;].instance.resize(eSize(*textsize))
+# move list
+listsize = (wsizex - 20, 50)
+self[&quot;list&quot;].instance.move(ePoint(10, textsize[1]))
+self[&quot;list&quot;].instance.resize(eSize(*listsize))
+# center window
+newwidth = wsize[0]
+self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
+		</applet>
+	</screen>
+</skin>

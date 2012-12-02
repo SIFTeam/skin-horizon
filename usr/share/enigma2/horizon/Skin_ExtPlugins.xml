@@ -1,0 +1,688 @@
+<skin>
+
+  	<!-- P014 CrossEPG Configuration -->
+	<screen name="CrossEPG_Setup" position="0,0" size="1280,720" title="CrossEPG Configuration" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="55,90" zPosition="3" size="80,720" pixmap="horizon/menu/nemesis.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<widget name="config" position="180,100" size="650,250" scrollbarMode="showOnDemand" zPosition="1" selectionPixmap="horizon/bars/ls_750x24.png" backgroundColor="black" transparent="1" />
+		<widget name="information" position="180,440" size="610,300" halign="center" valign="center" font="Regular;22" foregroundColor="yellow" backgroundColor="black" transparent="1" />
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="100,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,24" name="key_red"    font="Regular;22" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+
+  	<!-- P014a CrossEPG Menu -->
+	<screen name="CrossEPG_Menu" position="0,0" size="1280,720" title="CrossEPG Menu" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="55,90" zPosition="3" size="80,720" pixmap="horizon/menu/nemesis.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<ePixmap position="800,100" zPosition="4" size="29,532" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="800,632" zPosition="4" size="29,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+		<widget source="list" render="Listbox" position="180,100" size="645,532" scrollbarMode="showOnDemand" enableWrapAround="1" selectionPixmap="horizon/bars/ls_750x36.png" backgroundColor="black" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (20, 5), size = (32, 32), png = 0),
+					MultiContentEntryText(pos = (60, 5), size = (440, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 38
+				}
+			</convert>
+		</widget>	
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="100,40" zPosition="4" alphatest="blend" transparent="1" />
+		<eLabel text="Exit" position="80,672" size="200,22" font="Regular;20" halign="left" zPosition="3" backgroundColor="darkgrey" transparent="1"/>
+	</screen>
+
+	<!-- P014b CrossEPG Providers -->
+	<screen name="CrossEPG_Providers" position="0,0" size="1280,720" title="CrossEPG Provider XMLTV-OpenTV-XEPGDB-MHW2-M7-RAI" backgroundColor="transparent" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="55,90" zPosition="3" size="80,720" pixmap="horizon/menu/nemesis.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<widget source="list" render="Listbox" position="170,100" size="645,480" scrollbarMode="showOnDemand" enableWrapAround="1" selectionPixmap="horizon/bars/ls_750x24.png" backgroundColor="black" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (35, 0), size = (700, 32), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
+					MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (25, 30), png = 1),
+					],
+					"fonts": [gFont("Regular", 20)],
+					"itemHeight": 28
+				}
+			</convert>
+		</widget>
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="600,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,24" name="key_red"    font="Regular;22" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="320,672"  size="200,24" name="key_green"  font="Regular;22" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="580,672"  size="200,24" name="key_yellow" font="Regular;22" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+
+	<!-- P014c CrossEPG Order List -->
+	<screen name="CrossEPG_Ordering" position="0,0" size="1280,720" title="CrossEPG Order Download List" backgroundColor="transparent" flags="wfNoBorder" > 
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="55,90" zPosition="3" size="80,720" pixmap="horizon/menu/nemesis.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<ePixmap position="800,100" zPosition="4" size="29,532" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="800,632" zPosition="4" size="29,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+		<widget source="list" render="Listbox" position="180,100" size="645,480" scrollbarMode="showOnDemand" enableWrapAround="1" selectionPixmap="horizon/bars/ls_750x24.png" backgroundColor="black" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (5, 0), size = (700, 32), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
+					MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (25, 30), png = 1),
+					],
+					"fonts": [gFont("Regular", 20)],
+					"itemHeight": 28
+				}
+			</convert>
+		</widget>
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="600,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,24" name="key_red"    font="Regular;22" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="320,672"  size="200,24" name="key_green"  font="Regular;22" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="580,672"  size="200,24" name="key_yellow" font="Regular;22" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+
+	<!-- P014d CrossEPG Information -->
+	<screen name="CrossEPG_Info" position="0,0" size="1280,720" title="CrossEPG - DB Info" backgroundColor="transparent" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="55,90" zPosition="3" size="80,720" pixmap="horizon/menu/nemesis.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<widget name="version"            position="180,120" size="720,25" font="Regular;26" foregroundColor="bluette" backgroundColor="black" transparent="1" />
+		<ePixmap position="180,150" zPosition="2" size="610,4" pixmap="horizon/menu/line.png" />
+		<widget name="create"             position="180,180" size="720,25" font="Regular;20" backgroundColor="black" transparent="1" />
+		<widget name="last_update"        position="180,210" size="720,25" font="Regular;20" backgroundColor="black" transparent="1" />
+		<ePixmap position="180,240" zPosition="2" size="610,4" pixmap="horizon/menu/line.png" />
+		<widget name="headersdb_size"     position="180,270" size="720,25" font="Regular;20" backgroundColor="black" transparent="1" />
+		<widget name="descriptorsdb_size" position="180,300" size="720,25" font="Regular;20" backgroundColor="black" transparent="1" />
+		<ePixmap position="180,330" zPosition="2" size="610,4" pixmap="horizon/menu/line.png" />
+		<widget name="indexesdb_size"     position="180,360" size="720,25" font="Regular;20" backgroundColor="black" transparent="1" />
+		<widget name="aliasesdb_size"     position="180,390" size="720,25" font="Regular;20" backgroundColor="black" transparent="1" />
+		<widget name="total_size"         position="180,420" size="720,25" font="Regular;20" backgroundColor="black" transparent="1" />
+		<ePixmap position="180,450" zPosition="2" size="610,4" pixmap="horizon/menu/line.png" />
+		<widget name="channels_count"     position="180,480" size="720,25" font="Regular;20" foregroundColor="bluette" backgroundColor="black" transparent="1" />
+		<widget name="events_count"       position="180,510" size="720,25" font="Regular;20" foregroundColor="bluette" backgroundColor="black" transparent="1" />
+		<widget name="hashes_count"       position="180,540" size="720,25" font="Regular;20" foregroundColor="bluette" backgroundColor="black" transparent="1" />
+		<ePixmap position="845,550" zPosition="-1" size="390,50" pixmap="horizon/menu/startbox.png" alphatest="blend" transparent="1" />
+			<ePixmap  pixmap="horizon/buttons/key_red.png" 	 position="856,575" size="35,25" zPosition="4" alphatest="blend" transparent="1" />
+			<widget position="901,575" size="140,24" name="key_red" font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="2" />
+		<ePixmap position="847,600" zPosition="-1" size="388,40" pixmap="horizon/menu/endbox.png" alphatest="blend" transparent="1" />
+	</screen>
+
+	<!-- P014e CrossEPG About -->
+	<screen name="CrossEPG_About" position="0,0" size="1280,720" title="CrossEPG About" backgroundColor="transparent" flags="wfNoBorder" > 
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="55,90" zPosition="3" size="80,720" pixmap="horizon/menu/nemesis.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<widget name="about" position="180,100" size="650,600" font="Regular;20" backgroundColor="black" transparent="1" />
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="100,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,24" name="key_red"    font="Regular;22" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+
+	<!-- CCcam Main Menu -->
+
+	<!-- P022 CCcam Main Menu -->
+	<screen name="CCcamInfoMain" position="0,0" size="1280,720" title="Info Main" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<widget name="menu" position="180,100" size="650,420" scrollbarMode="showOnDemand" zPosition="5" selectionPixmap="horizon/bars/ls_750x24.png" backgroundColor="transpBlack" transparent="1" />
+	</screen>
+
+	<!-- P022a CCcam General Info -->
+	<screen name="CCcamInfoInfoScreen" position="0,0" size="1280,720" title="CCcam General Info" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<widget name="text" position="180,100" size="650,420" font="Regular;20" backgroundColor="transpBlack" transparent="1" />
+	</screen>
+	
+	<!--  P022b CCcam Client Info -->
+	<screen name="CCcamInfoSubMenu" position="0,0" size="1280,720" title="CCcam Client Info" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<ePixmap position="800,100" zPosition="4" size="29,450" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="800,560" zPosition="4" size="29,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+		<widget name="list" position="180,100" size="645,450" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
+		<widget name="info" position="835,370" size="400,340" font="Regular;22" foregroundColor="bluette" backgroundColor="transpBlack" transparent="1" />
+	</screen>
+
+	<!--  P022c CCcam Server Menu -->
+ 	<screen name="CCcamInfoServerMenu" position="0,0" size="1280,720" title="CCcam Server View" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<ePixmap position="800,120" zPosition="4" size="29,450" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="800,560" zPosition="4" size="29,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+		<widget name="list" position="180,100" size="645,450" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
+		<widget name="info" position="835,370" size="400,340" font="Regular;22" foregroundColor="bluette" backgroundColor="transpBlack" transparent="1" />
+ 	</screen>
+ 
+	<!--  P022d CCcam Share View -->
+ 	<screen name="CCcamShareViewMenu" position="0,0" size="1280,720" title="CCcam Share View" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<ePixmap position="800,120" zPosition="4" size="29,420" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="800,530" zPosition="4" size="29,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+		<widget name="list" position="180,100" size="645,420" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x70.png" transparent="1" />
+ 		<widget name="uphops" position="835,370" size="260,25" font="Regular;24" foregroundColor="bluette" transparent="1" backgroundColor="black" />
+ 		<widget name="cards" position="835,410" size="260,25" font="Regular;24" transparent="1" backgroundColor="black" />
+ 		<widget name="providers" position="835,450" size="260,25" font="Regular;24" transparent="1" foregroundColor="bluette" backgroundColor="black" />
+ 		<widget name="reshare" position="835,490" size="260,25" font="Regular;24" transparent="1" backgroundColor="black" />
+		<widget name="title" position="70,575" size="560,25" halign="left" font="Regular;22" zPosition="4" foregroundColor="bluette" backgroundColor="black" transparent="1" />	
+	</screen>
+ 
+	<!--  P022e CCcam Remote Box Info -->
+ 	<screen name="CCcamInfoRemoteBoxMenu" position="0,0" size="1280,720" title="CCcam Remote Box Info" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<ePixmap position="800,120" zPosition="4" size="29,420" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="800,530" zPosition="4" size="29,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+ 		<widget name="list" position="180,100" size="645,420" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x24.png" backgroundColor="black" transparent="1" />
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="800,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,24" name="key_red"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="320,672"  size="200,24" name="key_green"  font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="580,672"  size="200,24" name="key_yellow" font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="840,672"  size="200,24" name="key_blue"   font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+ 	</screen>
+ 
+	<!--  P022f CCcam Info Shared -->
+ 	<screen name="CCcamInfoShareInfo" position="0,0" size="1280,720" title="CCcam Info Shared" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<ePixmap position="765,120" zPosition="4" size="29,420" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="765,530" zPosition="4" size="29,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+ 		<widget name="list" position="180,100" size="720,420" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x70.png" backgroundColor="black" transparent="1" />
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="800,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,24" name="key_red"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="320,672"  size="200,24" name="key_green"  font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="580,672"  size="200,24" name="key_yellow" font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="840,672"  size="200,24" name="key_blue"   font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+
+	<!--  P022h CCcam Ecm Info Selection -->
+ 	<screen name="CCcamInfoEcmInfoSelection" position="0,0" size="1280,720" title="CCcam Ecm Info Selection" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<ePixmap position="800,120" zPosition="4" size="29,420" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="800,530" zPosition="4" size="29,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+ 		<widget name="list" position="180,100" size="645,420" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
+ 	</screen>
+
+	<!--  P022i CCcam Ecm Info Config Menu -->
+ 	<screen name="CCcamInfoConfigMenu" position="0,0" size="1280,720" title="CCcam Info Config Menu" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<widget name="config" position="180,100" size="650,160" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
+ 	</screen>
+
+	<!--  P022j CCcam Ecm Info SubMenu -->
+	<screen nae="CCcamInfoSubMenu" position="center,center" size="500,420" title="CCcam Info SubMenu" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="800,120" zPosition="4" size="29,250" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="800,360" zPosition="4" size="29,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+		<widget name="list" position="180,100" size="645,250" scrollbarMode="showOnDemand" />
+		<widget name="info" position="180,375" size="645,165" font="Regular;16" transparent="1" />
+	</screen>
+
+	<!--  P022k CCcam Ecm Info Selection -->
+	<screen name="CCcamInfoEcmInfoSelection" position="0,0" size="1280,720" title="CCcam Ecm Info Selection" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="800,120" zPosition="4" size="29,420" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="800,535" zPosition="4" size="29,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+ 		<widget name="list" position="180,100" size="645,420" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
+	</screen>
+
+	<!--  P022m CCcam Info Config Menu -->
+	<screen name="CCcamInfoMenuConfig" position="0,0" size="1280,720" title="CCcam Info Menu Config" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="800,120" zPosition="4" size="29,450" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="800,560" zPosition="4" size="29,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+		<widget name="list" position="180,100" size="645,450" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x36.png" transparent="1" />
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="600,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,24" name="key_red"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="320,672"  size="200,24" name="key_green"  font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="580,672"  size="200,24" name="key_yellow" font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+
+	<!--  P022n CCcam Info Config Switcher -->
+	<screen name="CCcamInfoConfigSwitcher" position="0,0" size="1280,720" title="CCcam Info Config Switcher" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="800,120" zPosition="4" size="29,420" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="800,530" zPosition="4" size="29,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
+		<widget name="list" position="180,100" size="645,420" scrollbarMode="showOnDemand" transparent="1" />
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="800,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,24" name="key_red"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="320,672"  size="200,24" name="key_green"  font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="580,672"  size="200,24" name="key_yellow" font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="840,672"  size="200,24" name="key_blue"   font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+
+	<!--  P023  osCam Info Menu -->
+	<screen name="CamInfoMenu" position="0,0" size="1280, 720" title="osCam Info Menu" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="835,35" zPosition="3" size="380,38" pixmap="horizon/menu/dmm2.png" alphatest="blend" transparent="1" />
+		<ePixmap position="500,665" zPosition="3" size="400,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<widget source="Title" render="Label" zPosition="2" position="60,37" size="1200,40" halign="left" font="Regular; 28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<widget enableWrapAround="1" name="mainmenu" position="70,120" size="720,280" zPosition="5" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x24.png" backgroundColor="transpBlack" transparent="1" />
+	</screen>
+		
+	<!-- P023a osCam ECM Info -->
+	<screen name="oscECMInfo" position="0,0" size="1280, 720" title="osCam ECM Info" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="835,35" zPosition="3" size="380,38" pixmap="horizon/menu/dmm2.png" alphatest="blend" transparent="1" />
+		<ePixmap position="500,665" zPosition="3" size="400,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<widget source="Title" render="Label" zPosition="2" position="60,37" size="1200,40" halign="left" font="Regular; 28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<widget enableWrapAround="1" name="output" position="70,120" size="720,300" zPosition="5" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x24.png" backgroundColor="transpBlack" transparent="1" />
+	</screen>
+		
+	<!-- P023b osCam Info Setup -->
+	<screen name="CamInfoConfigScreen" position="0,0" size="1280,720" title="osCam Info Setup" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="835,35" zPosition="3" size="380,38" pixmap="horizon/menu/dmm2.png" alphatest="blend" transparent="1" />
+		<widget source="Title" render="Label" zPosition="2" position="60,37" size="1200,40" halign="left" font="Regular; 28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<widget enableWrapAround="1" name="config" position="70,120" size="720,360" zPosition="5" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x24.png" backgroundColor="transpBlack" transparent="1" />
+		<widget enableWrapAround="1" name="status" render="Label" position="10,380" zPosition="5" size="640,70" font="Regular;16" halign="center" valign="center" transparent="1" />
+		<widget source="key_red" render="Label" position="95,659" zPosition="2" size="200,40" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" />
+		<widget source="key_green" render="Label" position="395,659" zPosition="2" size="200,40" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" />
+	</screen>
+		
+	<!-- P023c osCam Proxy Server Setup -->
+	<screen name="ProxyServerConfigScreen" position="0,0" size="1280,720" title="osCam Proxy Server Setup" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="835,35" zPosition="3" size="380,38" pixmap="horizon/menu/dmm2.png" alphatest="blend" transparent="1" />
+		<widget source="Title" render="Label" zPosition="2" position="60,37" size="1200,40" halign="left" font="Regular; 28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<widget enableWrapAround="1" name="config" position="70,120" size="720,360" scrollbarMode="showOnDemand" zPosition="5" selectionPixmap="horizon/bars/ls_750x24.png" backgroundColor="transpBlack" transparent="1" />
+		<widget enableWrapAround="1" name="status" render="Label" position="70,520" zPosition="5" size="640,70" font="Regular;16" halign="left" valign="center" transparent="1" />
+		<widget source="key_red" render="Label" position="95,659" zPosition="2" size="200,40" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" />
+		<widget source="key_green" render="Label" position="395,659" zPosition="2" size="200,40" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" />
+	</screen>
+		
+	<!-- P023d OSCam Infos -->
+	<screen name="ShowOSCamInfoScreen" position="0,0" size="1280, 720" title="OSCam Infos" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="835,35" zPosition="3" size="380,38" pixmap="horizon/menu/dmm2.png" alphatest="blend" transparent="1" />
+		<ePixmap position="500,665" zPosition="3" size="400,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<widget source="Title" render="Label" zPosition="2" position="60,37" size="1200,40" halign="left" font="Regular; 28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<widget enableWrapAround="1" name="oscInfomenu" position="70,120" size="720,380" zPosition="5" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x24.png" backgroundColor="transpBlack" transparent="1" />
+	</screen>
+		
+	<!-- P023e osCam Info Clients -->
+	<screen name="oscEntitlements" position="0,0" size="1280,720" title="osCam Info Clients" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="835,35" zPosition="3" size="380,38" pixmap="horizon/menu/dmm2.png" alphatest="blend" transparent="1" />
+		<ePixmap position="500,665" zPosition="3" size="400,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<widget source="Title" render="Label" zPosition="2" position="60,37" size="1200,40" halign="left" font="Regular; 28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<eLabel text=" " position="0,91" size="1280,550" font="Regular;26" zPosition="1" foregroundColor="black" backgroundColor="black"/>
+		<widget enableWrapAround="1" source="output" render="Listbox" position="70,120" size="1180,420" zPosition="5" scrollbarMode="showOnDemand" backgroundColor="transpBlack" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"templates":
+				{"default": (55,[
+					MultiContentEntryText(pos = (0, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+					MultiContentEntryText(pos = (90, 1), size = (150, 24), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+					MultiContentEntryText(pos = (250, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+					MultiContentEntryText(pos = (290, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+					MultiContentEntryText(pos = (330, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+					MultiContentEntryText(pos = (370, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+					MultiContentEntryText(pos = (410, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+					MultiContentEntryText(pos = (480, 1), size = (70, 24), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+					MultiContentEntryText(pos = (550, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 8), # index 8 is reshare
+					MultiContentEntryText(pos = (0, 25), size = (700, 24), font=1, flags = RT_HALIGN_LEFT, text = 9), # index 9 is providers
+					]),
+					"HD": (55,[
+					MultiContentEntryText(pos = (0, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+					MultiContentEntryText(pos = (90, 1), size = (150, 24), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+					MultiContentEntryText(pos = (250, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+					MultiContentEntryText(pos = (290, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+					MultiContentEntryText(pos = (330, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+					MultiContentEntryText(pos = (370, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+					MultiContentEntryText(pos = (410, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+					MultiContentEntryText(pos = (480, 1), size = (70, 24), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+					MultiContentEntryText(pos = (550, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 8), # index 8 is reshare
+					MultiContentEntryText(pos = (630, 1), size = (1024, 50), font=1, flags = RT_HALIGN_LEFT, text = 9), # index 9 is providers
+					]),
+				},
+				"fonts": [gFont("Regular", 18),gFont("Regular", 14),gFont("Regular", 24),gFont("Regular", 20)],
+				"itemHeight": 56
+				}
+			</convert>
+		</widget>
+	</screen>
+		
+	<!-- P023f Client Info -->
+	<screen name="oscInfo" position="80,90" size="1120, 600" title="Oscam Client Info" >
+		<!-- widget name="output" position="10,45" size="1120,600" zPosition="5" scrollbarMode="showOnDemand" -->
+		<widget name="status" position="8,95" size="1125,510" zPosition="2" font="Regular; 19" backgroundColor="transpBlack" transparent="1" />	
+	</screen>
+
+	<!-- P024 HDMI CEC Setup -->
+	<screen name="HdmiCECSetupScreen" position="0,0" size="1280,720" title="HDMI CEC setup" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<widget name="config" position="180,100" size="650,350" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
+		<ePixmap position="180,530" zPosition="-1" size="650,90" pixmap="horizon/menu/startbox1.png" alphatest="blend" transparent="1" /> 
+			<widget source="current_address" render="Label" position="195,560" size="635,30" zPosition="10" font="Regular;21" halign="left" valign="center" />
+			<widget source="fixed_address" render="Label" position="195,590" size="635,30" zPosition="10" font="Regular;21" halign="left" valign="center" />
+		<ePixmap position="182,620" zPosition="-1" size="798,40" pixmap="horizon/menu/endbox1.png" alphatest="blend" transparent="1" />
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="800,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget source="key_red"    render="Label" position="85,672"  zPosition="2" size="200,24" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green"  render="Label" position="325,672" zPosition="2" size="200,24" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" position="585,672" zPosition="2" size="200,24" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue"   render="Label" position="845,672" zPosition="2" size="200,24" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+
+	<!-- P025 HDMI CEC Setup -->
+	<screen name="OSD3DSetupScreen" position="0,0" size="1280,720" title="OSD 3D setup" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<widget name="config" position="180,100" size="650,350" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="400,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="320,672"   size="200,24" name="ok"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="80,672"  size="200,24" name="cancel"  font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+
+	<!-- P026 OpenAirPlay -->
+	<screen name="OpenAirPlayConfig" position="0,0" size="1280,720" title="SIFTeam OpenAirPlay Configuration" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<widget name="config" position="180,100" size="650,350" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="400,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,24" name="key_red"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="320,672"  size="200,24" name="key_green"  font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="580,672"  size="200,24" name="key_yellow" font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="840,672"  size="200,24" name="key_blue"   font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+
+	<!-- P027 OpenWebIf -->
+	<screen name="OpenWebifConfig" position="0,0" size="1280,720" title="OpenWebif Configuration" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend" transparent="1" />
+		<widget name="lab1" position="180,100" halign="center" size="660,60" zPosition="1" font="Regular;26" valign="top" foregroundColor="#606060" transparent="1" />
+		<widget name="config" position="180,160" size="650,350" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="400,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,24" name="key_red"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="320,672"  size="200,24" name="key_green"  font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+
+	<!-- P028 dFlash -->
+	<screen name="dFlash" position="center,100" size="760,40" title="Flashing" >
+		<widget name="logo" position="0,0" size="100,40" transparent="1" alphatest="on" />
+		<ePixmap  pixmap="horizon/buttons/b_red.png"    position="120,7" size="30,40" zPosition="4" alphatest="blend" transparent="1" />
+		<ePixmap  pixmap="horizon/buttons/b_green.png"  position="260,7" size="30,40" zPosition="4" alphatest="blend" transparent="1" />
+		<ePixmap  pixmap="horizon/buttons/b_yellow.png" position="430,7" size="30,40" zPosition="4" alphatest="blend" transparent="1" />
+		<ePixmap  pixmap="horizon/buttons/b_blue.png"   position="600,7" size="30,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="160,7"  size="200,24" name="buttonred"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="300,7"  size="200,24" name="buttongreen"  font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="470,7"  size="200,24" name="buttonyellow" font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="640,7"  size="200,24" name="buttonblue"   font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+
+	<!-- P028a dFlash Checking -->
+	<screen name="dFlashChecking" position="0,0" size="1280,720" title="choose NAND Flash Check" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="55,60" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+	       	<widget name="menu" position="180,100" size="650,230" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
+		<widget name="logo" position="190,600" size="100,40" transparent="1" alphatest="on" />
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="800,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,22" name="buttonred"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="320,672"  size="200,22" name="buttongreen"  font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="580,672"  size="200,22" name="buttonyellow" font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="840,672"  size="200,22" name="buttonblue"   font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+	
+	<!-- P028b dFlash Config -->
+	<screen name="dFlashConfiguration" position="0,0" size="1280,720" title="dFlash Configuration" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="55,60" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+	        <widget name="config" position="180,100" size="650,330" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
+		<widget name="logo" position="190,600" size="100,40" transparent="1" alphatest="on" />
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="800,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,22" name="buttonred"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="320,672"  size="200,22" name="buttongreen"  font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="580,672"  size="200,22" name="buttonyellow" font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="840,672"  size="200,22" name="buttonblue"   font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+	
+	<!-- P028c dFlash About-->
+        <screen name="dFlashAbout" position="0,0" size="1280,720" title="About dFlash" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
+		<ePixmap position="55,60" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+	        <ePixmap position="180,100" size="100,100" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/dFlash/g3icon_dflash.png" transparent="1" alphatest="on" />                                              
+	        <widget name="aboutdflash" position="180,230" size="650,50" valign="center" halign="center" zPosition="2"  foregroundColor="white" font="Regular;24" transparent="1" />
+	        <widget name="freefilesystem" position="180,300" size="180,240" valign="center" halign="center" zPosition="2"  foregroundColor="white" font="Regular;24" transparent="1"/>
+	        <widget name="freememory" position="430,300" size="180,240" valign="center" halign="center" zPosition="2"  foregroundColor="white" font="Regular;24" transparent="1" />
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="400,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,22" name="buttonred"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="320,672"  size="200,22" name="buttongreen"  font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+        </screen>
+
+	<!-- P029 AutoSky Menu -->
+	<screen name="AutoSkyBouquetsMenu" position="0,0" size="1280,720" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="55,60" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<widget name="config" position="180,100" size="650,528" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="800,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,24" name="key_red"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="320,672"  size="200,24" name="key_green"  font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="580,672"  size="200,24" name="key_yellow" font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="840,672"  size="200,24" name="key_blue"   font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<ePixmap position="1150,670" zPosition="4" size="130,25" pixmap="horizon/buttons/key_info.png" transparent="1" alphatest="on" />
+	</screen>
+
+	<!-- P029a AutoSky Bouquets-->
+	<screen name="AutoSkyBouquets" position="0,0" size="1280,720" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="55,60" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<widget name="sat"               position="180,100" size="140,30" font="Regular; 22" halign="right" zPosition="2" transparent="1" />
+		<widget name="satvalue"          position="330,100" size="400,30" font="Regular; 22" zPosition="2" foregroundColor="#538eff" backgroundColor="black" transparent="1" />
+		<widget name="area"              position="180,130" size="140,30" font="Regular; 22" halign="right" zPosition="2" transparent="1" />
+		<widget name="areavalue"         position="330,130" size="400,30" font="Regular; 22" zPosition="2" foregroundColor="#538eff" backgroundColor="black" transparent="1" />
+		<widget name="makemain"          position="180,160" size="140,30" font="Regular; 22" halign="right" zPosition="2" transparent="1" />
+		<widget name="makemaincheck"     position="330,160" size="32,32"  alphatest="on" zPosition="1" pixmaps="skin_default/icons/lock_off.png,skin_default/icons/lock_on.png"/>
+		<widget name="hd"                position="180,190" size="140,30" font="Regular; 22" halign="right" zPosition="2" transparent="1" />
+		<widget name="hdcheck"           position="330,190" size="32,32"  alphatest="on" zPosition="1" pixmaps="skin_default/icons/lock_off.png,skin_default/icons/lock_on.png"/>
+		<widget name="makesections"      position="180,220" size="140,30" font="Regular; 22" halign="right" zPosition="2" transparent="1" />
+		<widget name="makesectionscheck" position="330,220" size="32,32"  alphatest="on" zPosition="1" pixmaps="skin_default/icons/lock_off.png,skin_default/icons/lock_on.png"/>
+		<widget name="makefta"           position="180,250" size="140,30" font="Regular; 22" halign="right" zPosition="2" transparent="1" />
+		<widget name="makeftacheck"      position="330,250" size="32,32"  alphatest="on" zPosition="1" pixmaps="skin_default/icons/lock_off.png,skin_default/icons/lock_on.png"/>
+		<widget name="addprefix"         position="180,280" size="140,30" font="Regular; 22" halign="right" zPosition="2" transparent="1" />
+		<widget name="addprefixcheck"    position="330,280" size="32,32"  alphatest="on" zPosition="1" pixmaps="skin_default/icons/lock_off.png,skin_default/icons/lock_on.png"/>
+		<widget name="status"            position="180,310" size="140,30" font="Regular; 22" halign="right" zPosition="2" transparent="1" />
+		<widget name="status2"           position="330,310" size="400,30" font="Regular; 22" zPosition="5" foregroundColor="#538eff" backgroundColor="black" transparent="1"/>
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="800,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,24" name="key_red"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="320,672"  size="200,24" name="key_green"  font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="580,672"  size="200,24" name="key_yellow" font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="840,672"  size="200,24" name="key_blue"   font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<ePixmap position="1150,670" zPosition="4" size="130,25" pixmap="horizon/buttons/key_info.png" transparent="1" alphatest="on" />
+		<ePixmap position="1060,670" zPosition="4" size="130,25" pixmap="horizon/buttons/key_menu.png" transparent="1" alphatest="on" /> 
+	</screen>
+
+	<!-- P029b AutoSky Logs -->
+	<screen name="AutoSkyBouquetsLogView" position="0,0" size="1280,720" title="Backup Log" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="55,60" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<widget name="list" position="180,100" size="650,500" font="Regular;16" transparent="1" />
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="100,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,24" name="key_red"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<eLabel text="Exit" position="80,672" size="200,24" font="Regular;20" zPosition="1" backgroundColor="black" transparent="1" />
+	</screen>
+
+	<!-- P029c AutoSky -->
+	<screen name="HideSections" position="0,0" size="1280,720" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="55,60" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<widget source="list" render="Listbox" position="180,100" size="650,450" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x36.png" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (32, 32), png = 0),
+					MultiContentEntryText(pos = (47, 0), size = (400, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (450, 0), size = (120, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 36
+				}
+			</convert>
+		</widget>
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="400,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,24" name="key_red"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="320,672"  size="200,24" name="key_green"  font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+
+	<!-- P029d AutoSky -->
+	<screen name="KeepBouquets" position="0,0" size="1280,720" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
+		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
+		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
+		<ePixmap position="55,60" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
+		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
+		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
+		<widget source="list" render="Listbox" position="180,100" size="650,450" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x36.png" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (32, 32), png = 0),
+					MultiContentEntryText(pos = (47, 0), size = (400, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (450, 0), size = (120, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 36
+				}
+			</convert>
+		</widget>
+		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="400,40" zPosition="4" alphatest="blend" transparent="1" />
+		<widget position="80,672"   size="200,24" name="key_red"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="320,672"  size="200,24" name="key_green"  font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+</skin>
