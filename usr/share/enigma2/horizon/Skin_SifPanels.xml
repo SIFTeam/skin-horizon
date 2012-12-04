@@ -6,13 +6,12 @@
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="ScrollBarTemplate500" />
 		<eLabel text="SIF Blue Panel" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular;28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
-		<widget source="menu" render="Listbox" position="180,100" size="645,500" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x50.png" transparent="1" >
+		<widget source="menu" render="Listbox" position="180,100" size="645,500" scrollbarMode="showOnDemand" backgroundPixmap="horizon/icons/butselectionbw.png" selectionPixmap="horizon/icons/butselection.png" transparent="1" >
 			<convert type="TemplatedMultiContent">
   				{"template": [
-					MultiContentEntryPixmapAlphaTest(pos = (0, 1), size = (48, 48), png = 0),
-					MultiContentEntryText(pos = (60, 10), size = (300, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (60, 3), size = (300, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 				],
-				"fonts": [gFont("Regular", 22)],
+				"fonts": [gFont("Regular", 24)],
 				"itemHeight": 50
 				}
 			</convert>
@@ -25,16 +24,18 @@
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="4Buttons" />
 		<eLabel text="Cam Info" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular;28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
-		<widget source="menu" render="Listbox" position="180,100" size="650,180" scrollbarMode="showOnDemand" transparent="1">
+		<ePixmap position="180,101" zPosition="2" size="22,47" pixmap="horizon/icons/camserver.png" alphatest="blend" transparent="1" />
+		<ePixmap position="810,101" zPosition="2" size="22,47" pixmap="horizon/icons/camserver1.png" alphatest="blend" transparent="1" />
+		<widget source="menu" render="Listbox" position="180,100" size="630,160" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x50.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryText(pos = (5, 10), size = (145, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
-					MultiContentEntryText(pos = (155, 10), size = (75, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-					MultiContentEntryText(pos = (235, 10), size = (255, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
-					MultiContentEntryPixmapAlphaTest(pos = (490, 10), size = (24, 24), png = 3),
+					MultiContentEntryText(pos = (25, 10), size = (150, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
+					MultiContentEntryText(pos = (185, 10), size = (75, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (270, 10), size = (315, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					MultiContentEntryPixmapAlphaTest(pos = (595, 10), size = (24, 24), png = 3),
 				],
 				"fonts": [gFont("Regular", 22)],
-				"itemHeight": 40
+				"itemHeight": 50
 				}
 			</convert>
 		</widget>
@@ -77,16 +78,18 @@
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="4Buttons" />
 		<eLabel text="CardServer Info" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular;28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
-		<widget source="menu" render="Listbox" position="180,100" size="650,180" scrollbarMode="showOnDemand" transparent="1">
+		<ePixmap position="180,101" zPosition="2" size="22,47" pixmap="horizon/icons/camserver.png" alphatest="blend" transparent="1" />
+		<ePixmap position="810,101" zPosition="2" size="22,47" pixmap="horizon/icons/camserver1.png" alphatest="blend" transparent="1" />
+		<widget source="menu" render="Listbox" position="180,100" size="630,160" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x50.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryText(pos = (5, 10), size = (145, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
-					MultiContentEntryText(pos = (155, 10), size = (75, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-					MultiContentEntryText(pos = (235, 10), size = (255, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
-					MultiContentEntryPixmapAlphaTest(pos = (490, 10), size = (24, 24), png = 3),
+					MultiContentEntryText(pos = (25, 10), size = (150, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
+					MultiContentEntryText(pos = (185, 10), size = (75, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (270, 10), size = (315, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					MultiContentEntryPixmapAlphaTest(pos = (595, 10), size = (24, 24), png = 3),
 				],
 				"fonts": [gFont("Regular", 22)],
-				"itemHeight": 40
+				"itemHeight": 50
 				}
 			</convert>
 		</widget>
@@ -131,14 +134,13 @@
 		<panel name="4Buttons" />
 		<panel name="ScrollBarTemplate500" />
 		<eLabel text="Software Manager Categories" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular;28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
-		<widget source="list" render="Listbox" position="180,100" size="645,500" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x50.png" transparent="1">
+		<widget source="list" render="Listbox" position="180,100" size="645,500" scrollbarMode="showOnDemand" backgroundPixmap="horizon/icons/butselectionbw.png" selectionPixmap="horizon/icons/butselection.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
-					MultiContentEntryText(pos = (65, 10), size = (330, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-					MultiContentEntryText(pos = (400, 11), size = (130, 38), font=1, flags = RT_HALIGN_RIGHT|RT_VALIGN_TOP, text = 2),
+					MultiContentEntryText(pos = (65, 3), size = (330, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (400, 4), size = (130, 38), font=1, flags = RT_HALIGN_RIGHT|RT_VALIGN_TOP, text = 2),
 				],
-				"fonts": [gFont("Regular", 22), gFont("Regular", 20)],
+				"fonts": [gFont("Regular", 24), gFont("Regular", 20)],
 				"itemHeight": 50
 				}
 			</convert>
@@ -149,14 +151,13 @@
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="ScrollBarTemplate500" />
 		<eLabel text="Software Manager Feeds" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular;28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
-		<widget source="list" render="Listbox" position="180,100" size="645,500" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x50.png" transparent="1" >
+		<widget source="list" render="Listbox" position="180,100" size="645,500" scrollbarMode="showOnDemand" backgroundPixmap="horizon/icons/butselectionbw.png" selectionPixmap="horizon/icons/butselection.png" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
-					MultiContentEntryText(pos = (65, 10), size = (330, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (65, 3), size = (330, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 					MultiContentEntryText(pos = (400, 11), size = (150, 38), font=1, flags = RT_HALIGN_RIGHT|RT_VALIGN_TOP, text = 2),
 				],
-				"fonts": [gFont("Regular", 22), gFont("Regular", 20)],
+				"fonts": [gFont("Regular", 24), gFont("Regular", 20)],
 				"itemHeight": 50
 				}
 			</convert>
@@ -212,8 +213,9 @@
 		</widget>
 	</screen>
 	
-	<screen name="SMScreenshot" position="center,center" size="700,500" alphatest="blend"   zPosition="11"  >
-		<widget name="screenshot" position="center,center" size="600,450" alphatest="blend"   zPosition="10"  />
+	<screen name="SMScreenshot" position="center,center" size="1280,720" alphatest="blend" zPosition="11" flags="wfNoBorder" >
+		<panel name="GenericLayoutMidTemplate" />
+		<widget name="screenshot" position="180,100" size="600,450" alphatest="blend" zPosition="10"  />
 	</screen>
 
 	<screen name="SMSort" position="0,0" size="1280,720" Title="Software Manager Sort" flags="wfNoBorder">
@@ -289,14 +291,13 @@
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="ScrollBarTemplate500" />
 		<eLabel text="Settings Categories" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular;28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
-		<widget source="list" render="Listbox" position="180,100" size="645,500" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x50.png" transparent="1">
+		<widget source="list" render="Listbox" position="180,100" size="645,500" scrollbarMode="showOnDemand" backgroundPixmap="horizon/icons/butselectionbw.png" selectionPixmap="horizon/icons/butselection.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
-					MultiContentEntryText(pos = (65, 10), size = (330, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (65, 3), size = (330, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 					MultiContentEntryText(pos = (400, 11), size = (130, 38), font=1, flags = RT_HALIGN_RIGHT|RT_VALIGN_TOP, text = 2),
 				],
-				"fonts": [gFont("Regular", 22), gFont("Regular", 20)],
+				"fonts": [gFont("Regular", 24), gFont("Regular", 20)],
 				"itemHeight": 50
 				}
 			</convert>
@@ -308,14 +309,13 @@
 		<panel name="1Buttons" />
 		<panel name="ScrollBarTemplate500" />
 		<eLabel text="Settings" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular;28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
-		<widget source="list" render="Listbox" position="180,100" size="645,500" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x50.png" transparent="1">
+		<widget source="list" render="Listbox" position="180,100" size="645,500" scrollbarMode="showOnDemand" backgroundPixmap="horizon/icons/butselectionbw.png" selectionPixmap="horizon/icons/butselection.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
-					MultiContentEntryText(pos = (65, 10), size = (385, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (65, 3), size = (385, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 					MultiContentEntryText(pos = (460, 11), size = (130, 38), font=1, flags = RT_HALIGN_RIGHT|RT_VALIGN_TOP, text = 2),
 				],
-				"fonts": [gFont("Regular", 22), gFont("Regular", 20)],
+				"fonts": [gFont("Regular", 24), gFont("Regular", 20)],
 				"itemHeight": 50
 				}
 			</convert>
@@ -372,7 +372,6 @@
 
 	<screen name="CloudConfiguration" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplate" />
-		<panel name="4Buttons" />
 		<eLabel text="SIF Cloud Configuration" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular;28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
 		<widget name="config" position="180,100" scrollbarMode="showOnDemand" size="650,386" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
 	</screen>
@@ -389,7 +388,7 @@
 		<panel name="ScrollBarTemplate500" />
 		<eLabel text="Software Manager" zPosition="2" position="125,669" size="300,40" halign="left" font="Regular;22" transparent="1" backgroundColor="black" />
 		<ePixmap position="80,667" zPosition="3" size="35,36" pixmap="horizon/buttons/b_green.png" alphatest="blend" transparent="1" />
-		<widget name="list" position="180,100" size="645,500" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x50.png" transparent="1"/>
+		<widget name="list" position="170,100" size="655,500" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x50.png" transparent="1"/>
 	</screen>
 
 
@@ -399,13 +398,12 @@
 		<panel name="GenericLayoutMidTemplate" />
 		<panel name="ScrollBarTemplate500" />
 		<panel name="4Buttons" />
-		<widget source="menu" render="Listbox" position="180,100" size="645,500" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x50.png" transparent="1" >
+		<widget source="menu" render="Listbox" position="180,100" size="645,500" scrollbarMode="showOnDemand" backgroundPixmap="horizon/icons/butselectionbw.png" selectionPixmap="horizon/icons/butselection.png" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryPixmapAlphaTest(pos = (0, 1), size = (48, 48), png = 0),
-					MultiContentEntryText(pos = (60, 10), size = (300, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (60, 3), size = (300, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 					],
-					"fonts": [gFont("Regular", 22)],
+					"fonts": [gFont("Regular", 24)],
 					"itemHeight": 50
 				}
 			</convert>
@@ -450,10 +448,10 @@
 		<widget source="menu" render="Listbox" position="180,100" size="650,500" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x50.png" transparent="1"  >
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
-					MultiContentEntryText(pos = (65, 10), size = (135, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-					MultiContentEntryText(pos = (210, 10), size = (360, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
-					MultiContentEntryPixmapAlphaTest(pos = (580, 10), size = (24, 24), png = 3),
+					MultiContentEntryPixmapAlphaTest(pos = (5, 3), size = (48, 48), png = 0),
+					MultiContentEntryText(pos = (65, 3), size = (135, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (210, 3), size = (360, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					MultiContentEntryPixmapAlphaTest(pos = (580, 3), size = (24, 24), png = 3),
 					],
 					"fonts": [gFont("Regular", 22)],
 					"itemHeight": 50
@@ -468,16 +466,16 @@
 	<screen name="HddSetup" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="4Buttons" />
-		<eLabel text="Hard Drive Setup" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular;26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
-		<widget source="menu" render="Listbox" position="180,110" size="645,400" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x50.png" transparent="1">
+		<eLabel text="Hard Drive Setup" zPosition="2" position="180,45" size="730,40" halign="left" font="Regular;26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
+		<widget source="menu" render="Listbox" position="180,110" size="655,400" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x50.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
-					MultiContentEntryText(pos = (65, 10), size = (330, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-					MultiContentEntryText(pos = (405, 10), size = (125, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					MultiContentEntryText(pos = (50, 3), size = (430, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (515, 3), size = (135, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
 					],
 					"fonts": [gFont("Regular", 22)],
-					"itemHeight": 50
+					"itemHeight": 48
 				}
 			</convert>
 		</widget>
@@ -490,12 +488,12 @@
 		<widget source="menu" render="Listbox" position="180,100" size="650,360" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x50.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
-					MultiContentEntryText(pos = (65, 10), size = (330, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-					MultiContentEntryText(pos = (405, 10), size = (125, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					MultiContentEntryPixmapAlphaTest(pos = (5, 7), size = (48, 48), png = 0),
+					MultiContentEntryText(pos = (50, 1), size = (700, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (50, 25), size = (700, 38), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
 					],
-					"fonts": [gFont("Regular", 22)],
-					"itemHeight": 50
+					"fonts": [gFont("Regular", 22), gFont("Regular", 20)],
+					"itemHeight": 48
 				}
 			</convert>
 		</widget>
@@ -546,7 +544,6 @@
 	<!-- usb devices -->
 	<screen name="UsbDevices" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplate" />
-		<panel name="1Buttons" />
 		<eLabel text="Usb Devices" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular;28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
 		<widget source="menu" render="Listbox" position="180,110" size="650,450" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x50.png" transparent="1">
 			<convert type="TemplatedMultiContent">
@@ -569,7 +566,7 @@
 		<eLabel text="Swapp Manager" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular;28" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
 
 		<widget name="config" position="180,100" scrollbarMode="showOnDemand" selectionPixmap="horizon/bars/ls_750x24.png" size="650,330" transparent="1" />
-		<widget font="Regular; 20" halign="center" name="status" position="180,400" size="650,25" />
+		<widget font="Regular; 22" halign="left" name="status" position="180,620" size="650,25" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 	</screen>
 
 	<!-- Nameserver -->
@@ -671,7 +668,7 @@
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.FrontendInfo" render="Pixmap" pixmap="horizon/icons/cable.png" position="898,588" size="18,18" zPosition="3" alphatest="on" >
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="horizon/icons/mtuner.png" position="898,588" size="18,18" zPosition="3" alphatest="on" >
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">1,1</convert>
 			<convert type="ConditionalShowHide" />
@@ -752,64 +749,64 @@
 			<convert type="ValueRange">721,1980</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget text="NET" render="Label" source="session.CurrentService" position="940,611"  size="100,16" font="Regular;16" backgroundColor="transparent" foregroundColor="red" shadowColor="black" transparent="1" zPosition="4">
+		<widget text="NET" render="Label" source="session.CurrentService" position="940,613"  size="100,16" font="Regular;16" backgroundColor="transparent" foregroundColor="red" shadowColor="black" transparent="1" zPosition="4">
 			<convert type="ExtremeInfo">Net</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget text="EMU" render="Label" source="session.CurrentService" position="940,611"  size="100,16" font="Regular;16" backgroundColor="transparent" foregroundColor="bluette" shadowColor="black" transparent="1" zPosition="4">
+		<widget text="EMU" render="Label" source="session.CurrentService" position="940,613"  size="100,16" font="Regular;16" backgroundColor="transparent" foregroundColor="#63deff" shadowColor="black" transparent="1" zPosition="4">
 			<convert type="ExtremeInfo">Emu</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget text="CRD" render="Label" source="session.CurrentService" position="940,611"  size="100,16" font="Regular;16" backgroundColor="transparent" foregroundColor="bluette" shadowColor="black" transparent="1" zPosition="4">
+		<widget text="CRD" render="Label" source="session.CurrentService" position="940,613"  size="100,16" font="Regular;16" backgroundColor="transparent" foregroundColor="#63deff" shadowColor="black" transparent="1" zPosition="4">
 			<convert type="ExtremeInfo">Crd</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget text="BET" render="Label" source="session.CurrentService" position="900,611"  size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="bluette" transparent="1" zPosition="4">
+		<widget text="BET" render="Label" source="session.CurrentService" position="900,613"  size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="#63deff" transparent="1" zPosition="4">
 			<convert type="ExtremeInfo">BetaEcm</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget text="IRD" render="Label" source="session.CurrentService" position="900,611"  size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="bluette" transparent="1" zPosition="4">
+		<widget text="IRD" render="Label" source="session.CurrentService" position="900,613"  size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="#63deff" transparent="1" zPosition="4">
 			<convert type="ExtremeInfo">IrdEcm</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget text="SEC" render="Label" source="session.CurrentService" position="900,611"  size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="bluette" transparent="1" zPosition="4">
+		<widget text="SEC" render="Label" source="session.CurrentService" position="900,613"  size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="#63deff" transparent="1" zPosition="4">
 			<convert type="ExtremeInfo">SecaEcm</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget text="VIA" render="Label" source="session.CurrentService" position="900,611"  size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="bluette" transparent="1" zPosition="4">
+		<widget text="VIA" render="Label" source="session.CurrentService" position="900,613"  size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="#63deff" transparent="1" zPosition="4">
 			<convert type="ExtremeInfo">ViaEcm</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget text="NAG" render="Label" source="session.CurrentService" position="900,611"  size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="bluette" transparent="1" zPosition="4">
+		<widget text="NAG" render="Label" source="session.CurrentService" position="900,613"  size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="#63deff" transparent="1" zPosition="4">
 			<convert type="ExtremeInfo">NagraEcm</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget text="CRW" render="Label" source="session.CurrentService" position="900,611"  size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="bluette" transparent="1" zPosition="4">
+		<widget text="CRW" render="Label" source="session.CurrentService" position="900,613"  size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="#63deff" transparent="1" zPosition="4">
 			<convert type="ExtremeInfo">CrwEcm</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget text="NDS" render="Label" source="session.CurrentService" position="900,611"  size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="bluette" transparent="1" zPosition="4">
+		<widget text="NDS" render="Label" source="session.CurrentService" position="900,613"  size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="#63deff" transparent="1" zPosition="4">
 			<convert type="ExtremeInfo">NdsEcm</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget text="CON" render="Label" source="session.CurrentService" position="900,611"  size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="bluette" transparent="1" zPosition="4">
+		<widget text="CON" render="Label" source="session.CurrentService" position="900,613"  size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="#63deff" transparent="1" zPosition="4">
 			<convert type="ExtremeInfo">ConaxEcm</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget text="FTA" render="Label" source="session.CurrentService" position="900,611" size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="bluette" transparent="1" zPosition="4">
+		<widget text="FTA" render="Label" source="session.CurrentService" position="900,613" size="50,22" font="Regular;16" backgroundColor="black" foregroundColor="#63deff" transparent="1" zPosition="4">
 			<convert type="ExtremeInfo">Fta</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="980,611" size="112,26" font="Regular;16" zPosition="4" backgroundColor="black" foregroundColor="white" transparent="1" >
+		<widget source="session.CurrentService" render="Label" position="980,613" size="113,26" font="Regular;16" zPosition="4" backgroundColor="black" foregroundColor="white" transparent="1" >
 			<convert type="EmuCamInfo">EMU</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1110,611" size="200,26" font="Regular;16" zPosition="4" halign="left" backgroundColor="black" foregroundColor="bluette" transparent="1" >
+		<widget source="session.CurrentService" render="Label" position="1110,613" size="200,26" font="Regular;16" zPosition="4" halign="left" backgroundColor="black" foregroundColor="#63deff" transparent="1" >
 			<convert type="EmuCamInfo">Hops</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1157,611" size="50,26" font="Regular;16" zPosition="4" halign="right" backgroundColor="black" foregroundColor="white" transparent="1" >
+		<widget source="session.CurrentService" render="Label" position="1157,613" size="50,26" font="Regular;16" zPosition="4" halign="right" backgroundColor="black" foregroundColor="white" transparent="1" >
 			<convert type="EmuCamInfo">TimeValue</convert>
 		</widget>
-		<eLabel text="ms" zPosition="4" position="1210,611" size="30,22" halign="left" font="Regular;16" foregroundColor="bluette" transparent="1" backgroundColor="black" />
+		<eLabel text="ms" zPosition="4" position="1210,613" size="30,22" halign="left" font="Regular;16" foregroundColor="#63deff" transparent="1" backgroundColor="black" />
 	</screen>
 
 	<!-- (002) ####### SECOND INFOBAR ####### -->

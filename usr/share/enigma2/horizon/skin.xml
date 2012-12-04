@@ -1,8 +1,8 @@
 <skin>
 	<!--
-	##################### mmark_Horizont_DMM2 v.1.1.x ######################
+	##################### mmark_Horizont_SIF v.1.1.x ######################
 	#
-	mmark	-26     Version 1.1 released        16-07-2012
+	mmark	-26     Version 1.1 released        04-12-2012
 			Support MultiCam Panel
 			Support Oscam Info
 			Support CCCInfo
@@ -163,7 +163,9 @@
 		</widget>
 	</screen>
 	
-	<!-- S012 LCD screen (main) -->
+	
+	
+	<!-- S012 LCD screen (main) 
 	<screen name="InfoBarSummary" position="0,0" size="132,64" id="1">
 		<widget source="session.CurrentService" render="Label" position="6,0" size="120,32" font="Display;16" halign="center" valign="center">
 			<convert type="ServiceName">Name</convert>
@@ -182,6 +184,9 @@
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 	</screen>
+	-->
+	
+	
 	
 	<!-- S013 LCD screen (movieplayer) -->
 	<screen name="InfoBarMoviePlayerSummary" position="0,0" size="132,64" id="1">
@@ -268,16 +273,16 @@
 	</screen>
 
 	<!-- S0023 VirtualKeyBoard -->
-	<screen name="VirtualKeyBoard" position="center,center" size="660,380" zPosition="99" title="Virtual KeyBoard">
-		<ePixmap pixmap="horizon/skin_default/vkey_text.png" position="9,35" zPosition="-4" size="552,52" alphatest="on" transparent="1" />
-		<widget source="country" render="Pixmap" position="570,35" size="60,40" alphatest="on" borderWidth="0" borderColor="white">
+	<screen name="VirtualKeyBoard" position="center,center" size="720,350" zPosition="99" title="Virtual KeyBoard" flags="wfNoBorder" backgroundColor="black" >
+		<ePixmap position="0,0" zPosition="-1" size="720,350" pixmap="horizon/menu/vkeyb.png" backgroundColor="black" />
+		<widget source="country" render="Pixmap" position="650,47" size="57,42" alphatest="on" borderWidth="0" borderColor="white">
 			<convert type="ValueToPixmap">LanguageCode</convert>
 		</widget>
-		<ePixmap pixmap="horizon/buttons/button_yellow.png" position="572,58" size="26,24" alphatest="blend" transparent="1" />
-		<eLabel text="change" zPosition="4" position="575,74" size="250,24" halign="left" font="Regular;16" transparent="1" backgroundColor="black" />
-		<widget name="header" position="10,1" size="500,26" font="Regular;22" transparent="1" noWrap="1" foregroundColor="#538eff" />
-		<widget name="text" position="5,37" size="546,46" font="Regular;38" transparent="1" noWrap="1" halign="right" foregroundColor="#538eff" />
-		<widget name="list" position="25,120" size="540,225" selectionDisabled="1" transparent="1" />
+		<ePixmap pixmap="horizon/buttons/button_yellow.png" position="605,110" size="26,24" alphatest="blend" transparent="1" />
+		<eLabel text="Change Lang" zPosition="4" position="605,135" size="250,24" halign="left" font="Regular;16" transparent="1" backgroundColor="black" />
+		<widget name="text" position="35,43" size="590,46" font="Regular;38" transparent="1" noWrap="1" halign="right" foregroundColor="#538eff" backgroundColor="black" />
+		<widget name="header" position="35,92" size="600,26" font="Regular;18" transparent="1" noWrap="1" foregroundColor="yellow" backgroundColor="black" />
+		<widget name="list" position="35,115" size="560,223" selectionDisabled="1"  backgroundColor="black" alphatest="blend" transparent="1" />
 	</screen>
 
 	<!-- S024 Volume -->
@@ -370,7 +375,7 @@
 		<widget name="number" position="57,72" size="80,28" zPosition="1" halign="center" valign="center" font="Regular;24" transparent="1" foregroundColor="white" backgroundColor="black"/>
 	</screen>
 
-	<!-- M=MAINMENU -->
+	<!-- M=MAINMENU --> 
 
 	<!-- F001 Channel selection - TV --> 
 	<screen name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder">
@@ -386,6 +391,9 @@
 		<widget name="list" position="45,100" size="783,522" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" zPosition="3" serviceItemHeight="29"
 		                    serviceNumberFont="Regular;22" serviceNameFont="Regular;23" serviceInfoFont="Regular;23" colorServiceDescription="#91c9ff" colorServiceDescriptionSelected="white"
 		                    picServiceEventProgressbar="horizon/bars/pl.png" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
+		<widget source="ServiceEvent" render="Label" position="845,65" zPosition="3" size="385,28" font="Regular;22" halign="center" foregroundColor="yellow" backgroundColor="black" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
 		<ePixmap position="833,52" zPosition="-1" size="408,480" pixmap="horizon/menu/startbox.png" alphatest="blend" transparent="1" />
 			<widget source="ServiceEvent" render="Label" position="855,110" zPosition="12" halign="center" size="375,435" font="Regular;22" transparent="1" foregroundColor="#9ecdfe" backgroundColor="black" shadowColor="black" shadowOffset="-1,-1" >
 				<convert type="EventName">ExtendedDescription</convert>
@@ -393,15 +401,10 @@
 		<ePixmap position="835,531" zPosition="-1" size="406,40" pixmap="horizon/menu/endbox.png" alphatest="blend" transparent="1" />
 		<ePixmap position="833,560" zPosition="-1" size="408,50" pixmap="horizon/menu/startbox.png" alphatest="blend" transparent="1" />
 			<ePixmap position="850,575" zPosition="4" size="30,60" pixmap="horizon/icons/next.png" alphatest="blend" transparent="1" />
-    			<widget source="ServiceEvent" render="dmmNextEvent" position="880,562" size="350,60" font="Regular;19" halign="left" valign="bottom" zPosition="4" backgroundColor="transpBlack" foregroundColor="white" transparent="1" />
+		                <widget source="ServiceNextEvent" render="Label" position="875,577" size="370,126" font="Regular;19" halign="left" foregroundColor="#4ccbde" backgroundColor="#333333" transparent="1">
+			                <convert type="EventName">NameNext</convert>
+		                </widget>
 		<ePixmap position="835,610" zPosition="-1" size="406,40" pixmap="horizon/menu/endbox.png" alphatest="blend" transparent="1" />
-		<!-- Panel SatName -->
-		<widget source="session.CurrentService" render="Label" position="845,28" zPosition="2" size="400,24" font="Regular;22" halign="center" foregroundColor="grey" backgroundColor="black" transparent="1" shadowColor="black" shadowOffset="-1,-1" >
-			<convert type="dmmServiceInfo">SatName</convert>
-		</widget>
-		<widget source="ServiceEvent" render="Label" position="845,65" zPosition="3" size="385,28" font="Regular;22" halign="center" foregroundColor="bluette" backgroundColor="black" transparent="1">
-			<convert type="EventName">Name</convert>
-		</widget>
 		<ePixmap position="1180,670" zPosition="4" size="130,25" pixmap="horizon/buttons/key_info.png" transparent="1" alphatest="on" />
 		<ePixmap position="1100,670" zPosition="4" size="130,25" pixmap="horizon/buttons/key_menu.png" transparent="1" alphatest="on" /> 
 		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="800,40" zPosition="4" alphatest="blend" transparent="1" />
@@ -733,18 +736,26 @@
 		<widget name="currenttext" position="50,610" size="1200,25" halign="center" font="Regular;22" foregroundColor="#606060" backgroundColor="background" transparent="1" />
 		<widget name="PositionGauge" position="246,664" size="580,13" zPosition="2" pointer="horizon/bars/pointer.png:580,0" transparent="1" />
 		<!-- widget name="PositionGauge" position="-180,633" size="558,21" zPosition="15" pointer="horizon/bars/pointer.png:0,-5" transparent="0" -->
-		<widget name="repeat" position="50,647" size="50,30" pixmaps="horizon/icons/repeat_off.png,horizon/icons/repeat_on.png" transparent="1" alphatest="blend"/>
-		<widget source="session.CurrentService" render="Label" position="860,667" size="70,25" font="Regular;22" zPosition="2" halign="right" foregroundColor="white" backgroundColor="black" transparent="1" >
-			<convert type="ServicePosition">Position</convert>
-		</widget>
-		<eLabel text="  of              Min." position="930,667" size="300,24" font="Regular;22" zPosition="2" foregroundColor="#808080" backgroundColor="black"  transparent="1" />
-		<widget source="session.CurrentService" render="Label" position="980,667" size="100,25" font="Regular;22" zPosition="2" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1" >
+
+
+		<widget name="repeat" position="40,647" size="50,30" pixmaps="horizon/icons/repeat_off.png,horizon/icons/repeat_on.png" transparent="1" alphatest="blend"/>
+
+		<widget source="session.CurrentService" render="Label" position="95,652" size="70,25" font="Regular;20" zPosition="2" halign="left" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" >
 			<convert type="ServicePosition">Length</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1115,667" size="120,25" font="Regular;22" zPosition="2" halign="right" foregroundColor="#538eff" backgroundColor="black" transparent="1" >
+
+		<widget source="session.CurrentService" render="Label" position="145,652" size="70,25" font="Regular;20" zPosition="2" halign="right" foregroundColor="white" backgroundColor="transpBlack" transparent="1" >
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+
+
+		<widget source="session.CurrentService" render="Label" position="770,667" size="120,25" font="Regular;20" zPosition="2" halign="right" foregroundColor="bluette" backgroundColor="transpBlack" transparent="1" >
 			<convert type="ServicePosition">Remaining</convert>
 		</widget>
+
 		<eLabel name="nowPlaying" position="50,50" size="0,0" />
+
+
 	</screen>
 	
 	<!-- M012 Timer edit list -->
@@ -755,9 +766,7 @@
 		<widget source="Title" render="Label" zPosition="2" position="60,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<eLabel text="-" position="50,80" size="783,1" font="Regular;26" zPosition="0" backgroundColor="#606060"/>
 		<eLabel text="-" position="50,82" size="783,1" font="Regular;26" zPosition="0" backgroundColor="#404040"/>
-		<ePixmap position="800,110" zPosition="4" size="29,490" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
-		<ePixmap position="800,600" zPosition="4" size="29,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
-		<widget name="timerlist" position="60,110" size="765,490" scrollbarMode="showOnDemand" zPosition="2" selectionPixmap="horizon/bars/ls_750x70.png" transparent="1" />
+		<widget name="timerlist" position="60,110" size="765,490" scrollbarMode="showOnDemand" zPosition="2" transparent="1" />
 		<ePixmap pixmap="horizon/buttons/key_info.png"   position="1160,670" size="70,35" zPosition="2" alphatest="on"    transparent="1" />
 		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="800,40" zPosition="4" alphatest="blend" transparent="1" />
 		<widget position="80,672"   size="200,24" name="key_red"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
@@ -770,8 +779,6 @@
 	<screen name="TimerLog" position="0,0" size="1280,720" title="Timer log" flags="wfNoBorder" >
 		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png"  />
 		<widget source="Title" render="Label" zPosition="2" position="60,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
-		<ePixmap position="1200,100" zPosition="4" size="30,400" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
-		<ePixmap position="1200,500" zPosition="4" size="30,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
 		<widget name="loglist" position="60,100" size="1165,400" itemHeight="30" scrollbarMode="showOnDemand" transparent="1" />
 		<ePixmap position="35,580" zPosition="-1" size="800,30" pixmap="horizon/menu/startbox.png" alphatest="blend" transparent="1" />
 			<widget name="logentry" position="70,595" size="850,120" font="Regular;22" foregroundColor="yellow" transparent="1" />
@@ -1181,10 +1188,9 @@
 	</screen>
 
 	<!-- M027 Selection Slot -->
-	<screen name="RotorNimSelection" position="140,165" size="400,130" title="select Slot">
-		<widget name="nimlist" position="20,10" size="360,100" />
+	<screen name="RotorNimSelection" position="center,center" size="800,200" title="select Slot">
+		<widget name="nimlist" position="20,10" size="760,180" />
 	</screen>
-
 
  	<!-- M030 Network Config -->
 	<screen name="AdapterSetupConfiguration" position="0,0" size="1280,720" title="Network Configuration" flags="wfNoBorder" >
@@ -1285,10 +1291,10 @@
 		<widget name="IPInfo_Text" 		position="690,260" size="318,50" zPosition="2" font="Regular;22" halign="left" transparent="1" foregroundColors="#538eff,white,green" backgroundColor="black" />
 		<widget name="DNSInfo" 			position="690,310" size="318,50" zPosition="1"  />
 		<widget name="DNSInfo_Text" 		position="690,310" size="318,50" zPosition="2" font="Regular;22" halign="left" transparent="1" foregroundColors="#538eff,white,green" backgroundColor="black" />
-		<widget name="EditSettingsButton" 	position="670,370" size="150,50" zPosition="1"  />
-		<widget name="EditSettings_Text" 	position="675,370" size="150,50" zPosition="2" font="Regular;22" halign="left" transparent="1" foregroundColors="#538eff,white,green" backgroundColor="black" />
-		<eLabel text="-" position="180,410" size="650,1" font="Regular;26" zPosition="0" foregroundColor="grey" backgroundColor="black"/>
-		<eLabel text="-" position="180,412" size="650,1" font="Regular;26" zPosition="0" foregroundColor="grey" backgroundColor="#606060"/>
+		<widget name="EditSettingsButton" 	position="665,350" size="150,50" zPosition="1"  />
+		<widget name="EditSettings_Text" 	position="665,350" size="150,50" zPosition="2" font="Regular;22" halign="center" transparent="1" foregroundColors="#538eff,white,green" backgroundColor="black" />
+		<eLabel text="-" position="180,410" size="650,1" font="Regular;26" zPosition="0" backgroundColor="#202020"/>
+		<eLabel text="-" position="180,412" size="650,1" font="Regular;26" zPosition="0" backgroundColor="#606060"/>
 		<widget name="InfoText"	position="180,425" size="650,220" zPosition="25" font="Regular;20" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
 		<widget name="InfoTextBorder" position="0,0" size="0,0"/>
 		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="600,40" zPosition="4" alphatest="blend" transparent="1" />
@@ -1332,7 +1338,6 @@
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
 		<ePixmap  position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
-		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<ePixmap position="910,380" zPosition="1" size="380,256" pixmap="horizon/menu/setup_selection.png" alphatest="blend" transparent="1"/>
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
@@ -1583,11 +1588,9 @@
 		<widget source="Title" render="Label" zPosition="2" position="60,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<eLabel text="-" position="60,92" size="770,1" zPosition="2" backgroundColor="#808080"/>
 		<eLabel text="-" position="60,95" size="770,1" zPosition="2" backgroundColor="#404040"/>
-		<widget name="freeDiskSpace" position="670,42" zPosition="4" size="200,50" font="Regular;20" halign="left" foregroundColor="#538eff" transparent="1"  backgroundColor="black" />
+		<widget name="freeDiskSpace" position="640,42" zPosition="4" size="200,50" font="Regular;20" halign="left" foregroundColor="#538eff" transparent="1"  backgroundColor="black" />
 		<widget name="waitingtext" position="400,300" size="600,100" zPosition="4" font="Regular;26" halign="left" valign="center" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<!-- Lista Registrazioni -->
-		<ePixmap position="800,110" zPosition="4" size="29,525" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
-		<ePixmap position="800,635" zPosition="4" size="29,40" pixmap="horizon/bars/endbar.png" alphatest="blend" transparent="1" />
 		<widget name="list" position="60,110" size="765,525" scrollbarMode="showOnDemand" zPosition="4" foregroundColor="white" transparent="1" />
 		<widget source="Service" render="Label" position="860,60" zPosition="4" size="380,26" font="Regular;24" halign="left" foregroundColor="#538eff" transparent="1"  backgroundColor="black"> 
 			<convert type="MovieInfo">RecordServiceName</convert>
@@ -1601,7 +1604,7 @@
 		<widget source="Service" render="Label" position="850,110" zPosition="4" size="380,440" font="Regular;20" halign="center" foregroundColor="#9ecdfe" transparent="1"  shadowColor="black" shadowOffset="-2,-2" backgroundColor="black">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		<widget source="Service" render="Label" position="850,490" zPosition="5" size="380,144" font="Regular;20" halign="center" foregroundColor="yellow" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black"> 
+		<widget source="Service" render="Label" position="850,490" zPosition="5" size="480,144" font="Regular;20" halign="center" foregroundColor="yellow" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black"> 
 			<convert type="MovieInfo">ShortDescription</convert>
 		</widget>
 		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="800,40" zPosition="4" alphatest="blend" transparent="1" />
@@ -2193,7 +2196,6 @@
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
 		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
-		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
@@ -2230,7 +2232,6 @@
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
 		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
-		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<widget position="80,100" size="320,25" alphatest="on" zPosition="1" name="tabbar" pixmaps="skin_default/epg_now.png,skin_default/epg_next.png,skin_default/epg_more.png" />
@@ -2737,7 +2738,6 @@
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
 		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
-		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<widget name="text" position="70,100" size="730,27" font="Regular;23" foregroundColor="#538eff" transparent="1" backgroundColor="black"/>
@@ -2759,7 +2759,6 @@
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
 		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
-		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<eLabel position="190,50" size="640,1" backgroundColor="grey" />
@@ -3210,7 +3209,6 @@
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
 		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
-		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
@@ -3240,7 +3238,6 @@
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
 		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
-		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />

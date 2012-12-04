@@ -7,6 +7,7 @@
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
 		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="55,90" zPosition="3" size="80,720" pixmap="horizon/menu/nemesis.png" alphatest="blend"  />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
 		<widget name="config" position="180,100" size="650,250" scrollbarMode="showOnDemand" zPosition="1" selectionPixmap="horizon/bars/ls_750x24.png" backgroundColor="black" transparent="1" />
@@ -22,6 +23,7 @@
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
 		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="55,90" zPosition="3" size="80,720" pixmap="horizon/menu/nemesis.png" alphatest="blend"  />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
 		<ePixmap position="800,100" zPosition="4" size="29,532" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
@@ -29,7 +31,7 @@
 		<widget source="list" render="Listbox" position="180,100" size="645,532" scrollbarMode="showOnDemand" enableWrapAround="1" selectionPixmap="horizon/bars/ls_750x36.png" backgroundColor="black" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryPixmapAlphaTest(pos = (20, 5), size = (32, 32), png = 0),
+					MultiContentEntryPixmapAlphaTest(pos = (0, 5), size = (32, 32), png = 0),
 					MultiContentEntryText(pos = (60, 5), size = (440, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 					],
 					"fonts": [gFont("Regular", 22)],
@@ -48,6 +50,7 @@
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
 		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="55,90" zPosition="3" size="80,720" pixmap="horizon/menu/nemesis.png" alphatest="blend"  />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
 		<widget source="list" render="Listbox" position="170,100" size="645,480" scrollbarMode="showOnDemand" enableWrapAround="1" selectionPixmap="horizon/bars/ls_750x24.png" backgroundColor="black" transparent="1" >
@@ -74,6 +77,7 @@
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
 		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="55,90" zPosition="3" size="80,720" pixmap="horizon/menu/nemesis.png" alphatest="blend"  />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
 		<ePixmap position="800,100" zPosition="4" size="29,532" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
@@ -102,6 +106,7 @@
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
 		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="55,90" zPosition="3" size="80,720" pixmap="horizon/menu/nemesis.png" alphatest="blend"  />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<widget name="version"            position="180,120" size="720,25" font="Regular;26" foregroundColor="bluette" backgroundColor="black" transparent="1" />
 		<ePixmap position="180,150" zPosition="2" size="610,4" pixmap="horizon/menu/line.png" />
@@ -131,6 +136,7 @@
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
 		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="55,90" zPosition="3" size="80,720" pixmap="horizon/menu/nemesis.png" alphatest="blend"  />
+		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
 		<widget name="about" position="180,100" size="650,600" font="Regular;20" backgroundColor="black" transparent="1" />
@@ -218,7 +224,6 @@
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
 		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
-		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
@@ -237,7 +242,6 @@
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
 		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
-		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
@@ -326,7 +330,6 @@
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
 		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
-		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<ePixmap position="800,120" zPosition="4" size="29,420" pixmap="horizon/bars/maxbar.png" alphatest="blend" transparent="1" />
@@ -441,14 +444,13 @@
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
 		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
-		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
 		<widget name="config" position="180,100" size="650,350" selectionPixmap="horizon/bars/ls_750x24.png" transparent="1" />
 		<ePixmap position="180,530" zPosition="-1" size="650,90" pixmap="horizon/menu/startbox1.png" alphatest="blend" transparent="1" /> 
-			<widget source="current_address" render="Label" position="195,560" size="635,30" zPosition="10" font="Regular;21" halign="left" valign="center" />
-			<widget source="fixed_address" render="Label" position="195,590" size="635,30" zPosition="10" font="Regular;21" halign="left" valign="center" />
+			<widget source="current_address" render="Label" position="195,560" size="635,30" zPosition="10" font="Regular;21" halign="left" valign="center" transparent="1" />
+			<widget source="fixed_address" render="Label" position="195,590" size="635,30" zPosition="10" font="Regular;21" halign="left" valign="center" transparent="1" />
 		<ePixmap position="182,620" zPosition="-1" size="798,40" pixmap="horizon/menu/endbox1.png" alphatest="blend" transparent="1" />
 		<ePixmap  pixmap="horizon/buttons/allcolors1.png" position="40,669" size="800,40" zPosition="4" alphatest="blend" transparent="1" />
 		<widget source="key_red"    render="Label" position="85,672"  zPosition="2" size="200,24" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
@@ -477,7 +479,6 @@
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
 		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
-		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="65,65" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
@@ -523,7 +524,6 @@
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="horizon/menu/fr_mainX.png" />
 		<ePixmap position="0,0" zPosition="-1" size="1200,720" pixmap="horizon/menu/fr_shadow1.png" transparent="1" />
 		<ePixmap position="160,40" zPosition="-1" size="9,620" pixmap="horizon/menu/barmenu.png" alphatest="blend" />
-		<ePixmap position="900,672" zPosition="3" size="465,36" pixmap="horizon/menu/horizon.png" alphatest="blend" transparent="1" />
 		<ePixmap position="55,60" zPosition="3" size="80,720" pixmap="horizon/menu/about.png" alphatest="blend"  />
 		<widget source="Title" render="Label" zPosition="2" position="180,45" size="800,40" halign="left" font="Regular; 26" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-2,-2" backgroundColor="black" />
 		<ePixmap position="180,80" zPosition="3" size="655,1" pixmap="horizon/bars/s-title.png" alphatest="blend"  />
@@ -551,7 +551,6 @@
 		<widget position="80,672"   size="200,22" name="buttonred"    font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
 		<widget position="320,672"  size="200,22" name="buttongreen"  font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
 		<widget position="580,672"  size="200,22" name="buttonyellow" font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
-		<widget position="840,672"  size="200,22" name="buttonblue"   font="Regular;20" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
 	</screen>
 	
 	<!-- P028c dFlash About-->

@@ -27,15 +27,19 @@
 			<convert type="MenuEntryCompare">timer_edit</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="horizon/menu/ico_caminfo.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/scart_switch.png" position="910,430" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">scart_switch</convert>
+			<convert type="ConditionalShowHide" /> 
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/ico_cardserver.png" position="950,370" size="380,256" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">emu</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="horizon/menu/ico_caminfo.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/ico_cardserver.png" position="950,370" size="380,256" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">cs</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="horizon/menu/ico_noico.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/ico_cloud.png" position="950,480" size="380,256" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">cloud</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -47,7 +51,7 @@
 			<convert type="MenuEntryCompare">plugin_selection</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="horizon/menu/ico_code.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/setup_selection.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">scripts</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -59,15 +63,11 @@
 			<convert type="MenuEntryCompare">standby_restart_list</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="horizon/menu/ico_noico.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
-			<convert type="MenuEntryCompare">scart_switch</convert>
-			<convert type="ConditionalShowHide" /> 
-		</widget>
-		<widget source="menu" render="Pixmap" pixmap="horizon/menu/ico_noico.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/plugin_selection.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">dmc_mainmenu</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="horizon/menu/setup_noico.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="horizon/menu/dvd_player.png" position="910,380" size="380,256" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">dvd_player</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
