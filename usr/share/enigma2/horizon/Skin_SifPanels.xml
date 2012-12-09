@@ -409,7 +409,7 @@
 			</convert>
 		</widget>
 	</screen>
-	<screen name="PanelConfigAdd" position="center,center" size="560,430" title="Panel configuration Add" flags="wfNoBorder" >
+	<screen name="PanelConfigAdd" position="0,0" size="1280,720" title="Panel configuration Add" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
 		<panel name="ScrollBarTemplate500" />
 		<panel name="4Buttons" />
@@ -419,7 +419,7 @@
 					MultiContentEntryPixmapAlphaTest(pos = (0, 1), size = (48, 48), png = 0),
 					MultiContentEntryText(pos = (60, 10), size = (300, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 					],
-					"fonts": [gFont("Regular", 22)],
+					"fonts": [gFont("Regular", 24)],
 					"itemHeight": 50
 				}
 			</convert>
